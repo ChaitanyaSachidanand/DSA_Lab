@@ -28,14 +28,18 @@
 # 7. Write a program ls.py that takes path to a directory as command-line argument and 
 # prints  all  the  files  in  that  directory. When no  argument  is  specified, it  should  list  the 
 # files in the current directory. 
+#--- done
 
 # 8.  Write  a  program  largest-file.py  to  find  the  largest  file  in  the  given  directory.  The 
 # program  should  accept  the  directory name  as  command-line  argument  and  print path 
 # to the file (not just filename). 
+##--done
+
 # 9.  Write  a  program  most-recent-file.py  to  find  the  most  recently  modified  file  in  the 
 # given  directory.  The  program  should  accept  the  directory  name  as  command-line 
 # argument  and  print  path  to  the  file  (not  just  filename)  that  is  most  recently  modified 
-# file. 
+# file.
+ 
 # 10.  Write  a  program  files-only.py  to  find  only  file  and  not  sub  directories.  Pass 
 # directory name as command line argument. 
 # 11. Write a program find-matching-files.py to find files recursively in a directory tree 
