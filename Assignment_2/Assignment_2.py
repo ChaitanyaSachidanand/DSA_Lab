@@ -1,4 +1,4 @@
-from functions_2 import *
+from Assignment_2.functions_2 import *
 # 1. Python Program to Find the Largest Number in a List
 assert(large_num_list([1,4,7,2,5,8,9,6,3])==9)
 

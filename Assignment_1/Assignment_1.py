@@ -1,4 +1,4 @@
-from functions_1 import *
+from Assignment_1.functions_1 import *
 # 1. Python Program to Exchange the Values of Two Numbers Without Using a Temporary Variable. 
 assert(swap_num(15,90)==(90,15))
 
