@@ -39,18 +39,48 @@
 # given  directory.  The  program  should  accept  the  directory  name  as  command-line 
 # argument  and  print  path  to  the  file  (not  just  filename)  that  is  most  recently  modified 
 # file.
- 
+#  ----done
+
+
 # 10.  Write  a  program  files-only.py  to  find  only  file  and  not  sub  directories.  Pass 
 # directory name as command line argument. 
+#--done
+
 # 11. Write a program find-matching-files.py to find files recursively in a directory tree 
 # matching  given  wildcard  pattern.  The  program  should  accept  the  directory  and  the 
 # pattern as command-line argument. 
+#---done
+
 # 12. Write a program find-large-files.py to find files recursively in a directory tree that 
 # are  larger  than  given  size.  The  program  should  accept  the  directory  and  the  size  as 
 # command-line argument. The size can be also be specified with K, M and G suffix for 
 # KB, MB and GB respectively. 
-# 13. Write a function unique to find all the unique elements of a list. 
+#--done
+
+# 13. Write a function unique to find all the unique elements of a list.
+def uniq_element(data):
+    return list(set(data))
+
 # 14. Write a function dups to find all duplicates in the list. 
+def dups(input_list):
+    duplicate_set = set()
+    result = []
+
+    for item in input_list:
+        if input_list.count(item) > 1 and item not in duplicate_set:
+            duplicate_set.add(item)
+            result.append(item)
+
+    return result
+
+
 # 15.  Write  a  function group(list,  size)  that  take  a  list  and  splits  into  smaller  lists  of 
 # given size. 
- 
+
+def group(input_list, size):
+    grouped_lists = []
+    for i in range(0, len(input_list), size):
+        group = input_list[i:i+size]
+        grouped_lists.append(group)
+    return grouped_lists
+
