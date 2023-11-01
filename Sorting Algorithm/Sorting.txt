@@ -1,0 +1,9 @@
+
+​​Sorting – bubble, selection and insertion​ ​ 
+
+​​Sorting – Quick sort​ 
+
+​​Sorting – Merge sort​ 
+
+​​Sorting – Heap Sort​ 
+
