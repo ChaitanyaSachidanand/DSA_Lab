@@ -1,4 +1,5 @@
 from simpleQueue import *
+### implementiton with help of Queue
 class BST:
     class _Node:
         def __init__(self,ele):

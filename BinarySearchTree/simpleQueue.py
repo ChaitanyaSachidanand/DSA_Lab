@@ -1,3 +1,4 @@
+# Queue based BST implemetation
 class SimpleQueue:
     def __init__(self):
         self.data=[]
