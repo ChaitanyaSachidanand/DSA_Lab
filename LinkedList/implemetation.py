@@ -118,7 +118,37 @@ else:
 '''
 7. Write  an  efficient  code  to  remove  duplicate  elements  from  single  linked  list.  (you  can 
 make use of built in data structure “set”). '''
+def remove_duplicates(linked_list):
+    # Check if the linked list is empty or has only one node
+    if linked_list.head is None or linked_list.head.next is None:
+        return linked_list
 
+    # Create a set to store unique elements
+    unique_elements = set()
+
+    # Traverse the linked list
+    current = linked_list.head
+    previous = None
+    while current is not None:
+        # Check if the current element is a duplicate
+        if current.data in unique_elements:
+            # Remove the duplicate element by updating the next pointer of the previous node
+            previous.next = current.next
+        else:
+            # Add the current element to the set of unique elements
+            unique_elements.add(current.data)
+            previous = current
+
+        current = current.next
+
+    return linked_list
+a = LinkedList_()
+for i in range(10):
+    a.insert_head(i)
+    a.insert_head(i)
+a.print_listH()
+x=remove_duplicates(a)
+x.print_listH()
 '''
 8. Find middle element of linked list without iterating all elements. 
 '''
