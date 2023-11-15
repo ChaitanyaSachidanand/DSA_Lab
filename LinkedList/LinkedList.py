@@ -11,7 +11,7 @@ class LinkedList_():
     g. Search an element
     '''
     class Node:
-        def __init__(self,ele):
+        def __init__(self,ele=None):
             self.data=ele
             # self.prev=None
             self.next=None

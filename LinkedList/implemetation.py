@@ -152,6 +152,54 @@ x.print_listH()
 '''
 8. Find middle element of linked list without iterating all elements. 
 '''
+def find_middle_element(linked_list):
+    temp=linked_list.head
+    count=(lambda x: x//2 - 1 if x % 2 == 0 else x//2)(linked_list.count)
+    mid_element=0
+
+    while count//2!=mid_element:
+        temp=temp.next
+        mid_element+=1
+    
+    return temp.data,mid_element
+mid,index__=find_middle_element(x)
+x.print_listH()
+print("Middle most element in linked list is:",mid,"at index:",index__)
 '''
 9. Find whether linked list contains cycle. 
 '''
+def has_cycle(linked_list):
+    slow_ptr = linked_list.head
+    fast_ptr = linked_list.head
+
+    while fast_ptr is not None and fast_ptr.next is not None:
+        slow_ptr = slow_ptr.next
+        fast_ptr = fast_ptr.next.next
+
+        if slow_ptr == fast_ptr:
+            return True
+
+    return False
+
+temp = LinkedList_()
+temp.insert_head(1)
+node2 = LinkedList_()
+node2.insert_head(2)
+node3 = LinkedList_()
+node3.insert_head(3)
+node4 = LinkedList_()
+node4.insert_head(4)
+node5 = LinkedList_()
+node5.insert_head(5)
+
+temp.head.next = node2
+node2.head.next = node3
+node3.head.next = node4
+node4.head.next = node5
+node5.head.next = node2  # Creating a cycle by pointing the last node to node2
+
+# Test the has_cycle function
+if has_cycle(temp):
+    print("The linked list contains a cycle")
+else:
+    print("The linked list does not contain a cycle") #testing yet to be done
